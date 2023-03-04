@@ -17,7 +17,7 @@ public class SampleTestCase {
 		System.out.println("Test Case Started");
 
 		// Set the system property for the Edge browser
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Drivers/chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Drivers/chromedriver");
 
 		// Create the instance of Edge driver in Webdriver interface
 		WebDriver driver;driver = new ChromeDriver();

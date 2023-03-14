@@ -1,39 +1,41 @@
 package com.nxtgenai.automation;
 
+import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class SampleTestCase {
 
-	// Parameterize all the Input Values
-	String url = "https://nxtgenaiacademy.com/";
-
-	@Test
-	public void sampleTestCase() {
-
-		System.out.println("Test Case Started");
-
-		// Set the system property for the Edge browser
-		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"/Drivers/chromedriver");
-
-		// Create the instance of Edge driver in Webdriver interface
-		WebDriver driver;driver = new ChromeDriver();
-
-		// Implicity wait
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-
-		// Launch the application
-		driver.get(url);
-
-		// Maximize the window
+	static WebDriver driver;
+	
+	@BeforeClass
+	public void setup() throws MalformedURLException
+	{
+		WebDriverManager.chromedriver().setup();
+		driver= new ChromeDriver();
 		driver.manage().window().maximize();
-
-		System.out.println("Application Launched Successfully");
-		
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	}
+	
+	@Test
+	public void aajtakSearch() throws InterruptedException
+	{	
+		driver.navigate().to("https://nxtgenaiacademy.com/");
+		System.out.println("Title of page is "+driver.getTitle());
+		Thread.sleep(2000);
+	}
+	
+	@AfterClass
+	public void teardown() throws InterruptedException
+	{
 		driver.quit();
-
+		Thread.sleep(2000);
 	}
 }

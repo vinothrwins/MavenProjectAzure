@@ -7,13 +7,9 @@
   
   
   
- <properties>
-   
-        <suiteFile>testng.xml</suiteFile>
+ 	<properties>   
+        <suiteFile>Sanity.xml</suiteFile>
     </properties>
-
- 
-
 
 	<dependencies>
 	
@@ -24,45 +20,13 @@
 			<version>3.8.1</version>
 		</dependency>
 	
-	
-	
-<!-- 		
-		<dependency>
-  <groupId>org.test</groupId>
-  <artifactId>test</artifactId>
-  <version>1.0</version>
-  <systemPath>${project.basedir}/jar/Bladerunner.jar</systemPath>
-  <scope>system</scope>
-</dependency>
 
- -->
-
-<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
-<dependency>
-    <groupId>io.github.bonigarcia</groupId>
-    <artifactId>webdrivermanager</artifactId>
-    <version>5.2.3</version>
-</dependency>
-
-
-
-	
-		<dependency>
-			<groupId>com.aventstack</groupId>
-			<artifactId>extentreports</artifactId>
-			<version>3.0.0</version>
-		</dependency>
- 
-  
-  
-
-		<!-- https://mvnrepository.com/artifact/org.codehaus.plexus/plexus-classworlds -->
-		<dependency>
-			<groupId>org.codehaus.plexus</groupId>
-			<artifactId>plexus-classworlds</artifactId>
-			<version>2.5.2</version>
-		</dependency>
-
+	<!-- https://mvnrepository.com/artifact/io.github.bonigarcia/webdrivermanager -->
+	<dependency>
+	    <groupId>io.github.bonigarcia</groupId>
+	    <artifactId>webdrivermanager</artifactId>
+	    <version>5.2.3</version>
+	</dependency>
 
 
 		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
@@ -72,70 +36,6 @@
 			<version>6.11</version>
 		</dependency>
 
-
-		<dependency>
-			<groupId>com.google.guava</groupId>
-			<artifactId>guava</artifactId>
-			<version>24.0-jre</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpcore</artifactId>
-			<version>4.3</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi</artifactId>
-			<version>3.9</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.poi</groupId>
-			<artifactId>poi-ooxml</artifactId>
-			<version>3.9</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>4.3.4</version>
-		</dependency>
-
-		<dependency>
-			<groupId>commons-lang</groupId>
-			<artifactId>commons-lang</artifactId>
-			<version>2.4</version>
-		</dependency>
-
-
-		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.1</version>
-		</dependency>
-
-
-
-		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
-		<dependency>
-			<groupId>log4j</groupId>
-			<artifactId>log4j</artifactId>
-			<version>1.2.17</version>
-		</dependency>
-
-
-
-
-
-		<!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
-		<dependency>
-			<groupId>commons-io</groupId>
-			<artifactId>commons-io</artifactId>
-			<version>2.6</version>
-		</dependency>
 	</dependencies>
 
 
@@ -162,9 +62,6 @@
 				</configuration>
 			</plugin>
 
-
-
-
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-surefire-plugin</artifactId>
@@ -177,16 +74,6 @@
 			</plugin>
 		</plugins>
 
-
 	</build>
 	
-  
-  
-  
-  
-  
-  
-  
-  
-  
 </project>
